@@ -2,15 +2,21 @@ const CreateClientService = require("../../services/createClient/CreateClientSer
 
 class createClient {
   async store(request, response) {
-    const { name, document } = request.body;
-    const client = { name, document };
+    const { name, document, email, password } = request.body;
+    const client = { name, document, email, password };
 
-    try {
-      await CreateClientService.execute(client);
-      return response.status(201).json({ message: "Client save sucessfully" });
-    } catch {
-      return response.status(401).json({ message: "Cannot save client" });
+    const client_id = await CreateClientService.execute(client).catch(function (
+      err
+    ) {
+      console.log(err);
+      return response.status(401).json({ message: "Cannot save the client." });
+    });
+
+    if (!client_id) {
+      return response.status(401).json({ message: "Cannot save the client." });
     }
+
+    return response.status(201).json({ ...client });
   }
 }
 

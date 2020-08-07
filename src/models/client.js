@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Clients = sequelize.define(
-    "Clients",
+  const Client = sequelize.define(
+    "Client",
     {
       name: DataTypes.STRING,
       document: DataTypes.STRING,
@@ -9,5 +9,9 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
     }
   );
-  return Clients;
+
+  Client.associate = function (models) {
+    Client.hasMany(models.Order, { as: "documento_client" });
+  };
+  return Client;
 };

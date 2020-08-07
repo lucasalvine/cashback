@@ -7,8 +7,3 @@ const connection = new sequelize({
 });
 
 module.exports = connection;
-
-//clients - name, document
-//login - client_id, email, password
-//shops - code, value, date, client_id.document, status
-//cashbacks - shop_id, client_id, cashback

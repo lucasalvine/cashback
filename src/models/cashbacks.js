@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Cashbacks = sequelize.define(
-    "Cashbacks",
+  const Cashback = sequelize.define(
+    "Cashback",
     {
       value: DataTypes.STRING,
     },
@@ -8,5 +8,5 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
     }
   );
-  return Cashbacks;
+  return Cashback;
 };

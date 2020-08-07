@@ -1,7 +1,8 @@
 const express = require("express");
 const morgan = require("morgan");
 
-const teste = require("./routes/client");
+const client = require("./routes/client");
+const order = require("./routes/order");
 
 class App {
   constructor() {
@@ -18,7 +19,8 @@ class App {
   routes() {
     this.server.use(morgan("combined"));
 
-    this.server.use(teste);
+    this.server.use(client);
+    this.server.use(order);
   }
 }
 

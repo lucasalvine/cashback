@@ -2,13 +2,14 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 module.exports = (sequelize, DataTypes) => {
-  const Logins = sequelize.define(
-    "Logins",
+  const Login = sequelize.define(
+    "Login",
     {
       email: DataTypes.STRING,
       password: DataTypes.VIRTUAL,
       password_hash: DataTypes.STRING,
     },
+
     {
       hooks: {
         beforeSave: async (login) => {
@@ -20,13 +21,20 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  Logins.prototype.checkPassword = function (password) {
+  Login.associate = function (models) {
+    Login.belongsTo(models.Client, {
+      foreignKey: "client_id",
+      as: "client",
+    });
+  };
+
+  Login.prototype.checkPassword = function (password) {
     return bcrypt.compare(password, this.password_hash);
   };
 
-  Logins.prototype.generateToken = function () {
+  Login.prototype.generateToken = function () {
     return jwt.sign({ id: this.id }, process.env.APP_SECRET);
   };
 
-  return Logins;
+  return Login;
 };

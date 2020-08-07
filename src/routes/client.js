@@ -4,6 +4,5 @@ const CreateClientController = require("../controllers/createClient/CreateClient
 const client = Router();
 
 client.post("/client", CreateClientController.store);
-client.get();
 
 module.exports = client;

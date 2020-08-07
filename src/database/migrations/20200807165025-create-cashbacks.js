@@ -9,7 +9,17 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       value: {
+        require: true,
+        allowNull: true,
         type: Sequelize.STRING,
+      },
+      client_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "Client",
+          key: "id",
+        },
       },
       createdAt: {
         allowNull: false,

@@ -9,15 +9,29 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       code: {
+        require: true,
+        unique: true,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       value: {
+        require: true,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       date: {
+        require: true,
+        allowNull: true,
         type: Sequelize.DATE,
       },
+      document: {
+        require: true,
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       status: {
+        require: true,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       createdAt: {

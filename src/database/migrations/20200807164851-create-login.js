@@ -9,10 +9,23 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       email: {
+        allowNull: true,
         type: Sequelize.STRING,
       },
       password: {
+        allowNull: true,
+        type: Sequelize.VIRTUAL,
+      },
+      password_hash: {
         type: Sequelize.STRING,
+      },
+      client_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "Clients",
+          key: "id",
+        },
       },
       createdAt: {
         allowNull: false,
