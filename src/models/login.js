@@ -9,7 +9,6 @@ module.exports = (sequelize, DataTypes) => {
       password: DataTypes.VIRTUAL,
       password_hash: DataTypes.STRING,
     },
-
     {
       hooks: {
         beforeSave: async (login) => {

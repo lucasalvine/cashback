@@ -6,7 +6,7 @@ class CreateOrderRepository {
   async save(order) {
     const documentChecking = DocumentHelper.documentValidator(order.document);
     const client = documentChecking
-      ? await FindClientRepository.findOne(order.document)
+      ? await FindClientRepository.findByDocument(order.document)
       : "Cannot find client with this document";
 
     const status =

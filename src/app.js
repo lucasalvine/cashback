@@ -1,6 +1,11 @@
+require("dotenv").config({
+  path: process.env.NODE_ENV === "test" ? ".env.test" : ".env",
+});
+
 const express = require("express");
 const morgan = require("morgan");
 
+const session = require("./routes/session");
 const client = require("./routes/client");
 const order = require("./routes/order");
 
@@ -21,6 +26,8 @@ class App {
 
     this.server.use(client);
     this.server.use(order);
+
+    this.server.use(session);
   }
 }
 

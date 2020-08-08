@@ -19,7 +19,8 @@
     "knex": "^0.21.2",
     "morgan": "^1.10.0",
     "sequelize": "^6.3.4",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.0.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "commitlint": "^9.1.0",
