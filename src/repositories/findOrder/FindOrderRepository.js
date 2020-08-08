@@ -1,5 +1,9 @@
+const { Order } = require("../../models");
+
 class FindOrderRepository {
-  async findRepository() {}
+  async findOrders() {
+    await Order.findAndCountAll();
+  }
 }
 
 module.exports = new FindOrderRepository();

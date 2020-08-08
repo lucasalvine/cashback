@@ -1,4 +1,5 @@
 const { Login } = require("../../models");
+const RequestError = require("../../helpers/RequestError");
 
 class FindSessionController {
   async store(request, response) {
@@ -6,14 +7,12 @@ class FindSessionController {
 
     const login = await Login.findOne({ where: { email } });
 
-    console.log(login);
-
     if (!login) {
-      return response.status(401).json({ message: "Login not found" });
+      return RequestError.request_error_file(response);
     }
 
     if (!login.checkPassword(password)) {
-      return response.status(401).json({ message: "Incorrect password" });
+      return RequestError.request_error_password(response);
     }
 
     return response.json({

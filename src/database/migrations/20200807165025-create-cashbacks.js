@@ -13,11 +13,19 @@ module.exports = {
         allowNull: true,
         type: Sequelize.STRING,
       },
-      client_id: {
+      percentage: {
+        allowNull: true,
+        type: Sequelize.INTEGER,
+      },
+      due_date: {
+        allowNull: true,
+        type: Sequelize.DATE,
+      },
+      order_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: "Client",
+          model: "Orders",
           key: "id",
         },
       },

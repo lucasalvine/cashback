@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  Client.associate = function (models) {
-    Client.hasMany(models.Order, { as: "documento_client" });
-  };
+  /*   Client.associate = function (models) {
+    Client.hasMany(models.Order, { as: "document_client" });
+  }; */
   return Client;
 };
