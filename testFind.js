@@ -1,6 +1,6 @@
-const { Order } = require("./src/models");
+const { Cashback } = require("./src/models");
 
-Order.findAndCountAll({
-  offset: 10,
-  limit: 10,
-}).then((a) => console.log(a));
+Cashback.findAll({ include: "order" }).then((a) => {
+  console.log(JSON.stringify(a));
+  console.log(a.order);
+});

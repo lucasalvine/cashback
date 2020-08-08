@@ -1,8 +1,8 @@
 const FindOrderRepository = require("../../repositories/findOrder/FindOrderRepository");
 
 class FindOrderService {
-  async execute() {
-    FindOrderRepository.findOrders();
+  async execute(page) {
+    return await FindOrderRepository.findOrders(page);
   }
 }
 
