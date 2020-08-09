@@ -11,6 +11,8 @@
   "author": "Lucas Cunha",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^3.0.0",
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "email-validator": "^2.0.4",

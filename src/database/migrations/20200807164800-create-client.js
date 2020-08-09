@@ -9,13 +9,19 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       name: {
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.STRING,
+        validate: {
+          notEmpty: true,
+        },
       },
       document: {
-        allowNull: true,
+        allowNull: false,
         unique: true,
         type: Sequelize.STRING,
+        validate: {
+          notEmpty: true,
+        },
       },
       createdAt: {
         allowNull: false,

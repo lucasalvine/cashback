@@ -4,6 +4,7 @@ require("dotenv").config({
 
 const express = require("express");
 const morgan = require("morgan");
+const winston = require("./app/config/winston");
 
 const session = require("./app/routes/session");
 const client = require("./app/routes/client");
@@ -22,7 +23,7 @@ class App {
   }
 
   routes() {
-    this.server.use(morgan("combined"));
+    this.server.use(morgan("combined", { stream: winston.stream }));
 
     this.server.use(client);
     this.server.use(order);
