@@ -1,5 +1,5 @@
 const { Client } = require("../../models");
-const CreateLoginRepository = require("./CreateLoginRepository");
+const CreateLoginRepository = require("../createLogin/CreateLoginRepository");
 const DocumentHelper = require("../../helpers/DocumentHelper");
 
 class CreateClientRepository {

@@ -4,7 +4,7 @@ const FindCashbackController = require("../controllers/findCashback/FindCashback
 
 const client = Router();
 
-client.post("/client", CreateClientController.store);
+client.post("/clients", CreateClientController.store);
 
 //TODO CHANGE TO OTHER ROUTE FILE
 client.get("/cashback_accumulated", FindCashbackController.index);
