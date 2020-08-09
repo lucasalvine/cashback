@@ -4,12 +4,11 @@ const winston = require("winston");
 const options = {
   file: {
     level: "info",
-    filename: `${appRoot}/src/logs/combine.log`,
+    filename: `${appRoot}/logs/app.log`,
     handleExceptions: true,
     json: true,
-    maxsize: 5242880, // 5MB
-    maxFiles: 5,
-    colorize: false,
+    maxFiles: 10,
+    colorize: true,
   },
   console: {
     level: "debug",
@@ -23,11 +22,6 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File(options.file),
     new winston.transports.Console(options.console),
-
-    new winston.transports.File({
-      filename: `${appRoot}/src/logs/error.log`,
-      level: "error",
-    }),
   ],
   exitOnError: false,
 });
