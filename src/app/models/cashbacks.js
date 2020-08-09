@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     Cashback.belongsTo(models.Order, {
       foreignKey: "order_id",
       as: "order",
+      onDelete: "CASCADE",
     });
   };
   return Cashback;

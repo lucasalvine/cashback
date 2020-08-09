@@ -13,16 +13,13 @@ module.exports = {
         isEmail: true,
         type: Sequelize.STRING,
       },
-      password: {
-        allowNull: true,
-        type: Sequelize.VIRTUAL,
-      },
       password_hash: {
         type: Sequelize.STRING,
       },
       client_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        onDelete: "CASCADE",
         references: {
           model: "Clients",
           key: "id",

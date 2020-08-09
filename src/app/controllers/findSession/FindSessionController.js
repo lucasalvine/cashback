@@ -11,7 +11,7 @@ class FindSessionController {
       return ResponseError.response_error_file(response);
     }
 
-    if (!login.checkPassword(password)) {
+    if (!(await login.checkPassword(password))) {
       return ResponseError.response_error_password(response);
     }
 

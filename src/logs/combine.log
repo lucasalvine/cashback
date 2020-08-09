@@ -52,3 +52,16 @@
 {"message":"::ffff:127.0.0.1 - - [09/Aug/2020:03:51:22 +0000] \"POST /order HTTP/1.1\" 401 52 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
 {"message":"::ffff:127.0.0.1 - - [09/Aug/2020:03:51:47 +0000] \"POST /order HTTP/1.1\" 401 55 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
 {"message":"::ffff:127.0.0.1 - - [09/Aug/2020:03:51:56 +0000] \"POST /order HTTP/1.1\" 401 35 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:05:37 +0000] \"POST /session HTTP/1.1\" 401 32 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:06:00 +0000] \"GET /cashback_accumulated?document HTTP/1.1\" 201 54 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:06:18 +0000] \"GET /cashback_accumulated?document=10766827747 HTTP/1.1\" 201 65 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:06:31 +0000] \"GET /cashback_accumulated?document=10766827750 HTTP/1.1\" 201 65 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:06:51 +0000] \"GET /orders?page=1 HTTP/1.1\" 201 470 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:07:00 +0000] \"GET /orders?page=2 HTTP/1.1\" 201 317 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:18:11 +0000] \"POST /client HTTP/1.1\" 201 87 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:18:20 +0000] \"POST /session HTTP/1.1\" 401 32 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:18:29 +0000] \"POST /session HTTP/1.1\" 200 341 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:18:37 +0000] \"POST /order HTTP/1.1\" 201 76 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:25:05 +0000] \"POST /order HTTP/1.1\" 401 55 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:25:13 +0000] \"POST /client HTTP/1.1\" 201 87 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [09/Aug/2020:04:25:17 +0000] \"POST /order HTTP/1.1\" 201 76 \"-\" \"insomnia/2020.3.3\"\n","level":"info"}

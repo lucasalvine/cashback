@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     Login.belongsTo(models.Client, {
       foreignKey: "client_id",
       as: "client",
+      onDelete: "CASCADE",
     });
   };
 
