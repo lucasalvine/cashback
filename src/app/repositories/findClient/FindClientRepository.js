@@ -7,9 +7,14 @@ class FindClientRepository {
       where: {
         document: DocumentHelper.documentConverter(client_document),
       },
-    }).catch(function (err) {
-      return err;
-    });
+      limit: 1,
+    })
+      .then(function (client_find) {
+        return client_find;
+      })
+      .catch(function (err) {
+        return err;
+      });
 
     return client;
   }

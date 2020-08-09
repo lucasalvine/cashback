@@ -9,14 +9,17 @@ class CreateOrderController {
 
     const order_create = await CreateOrderService.execute(order);
 
+    console.log("!!", order_create);
+
     if (order_create.errors) {
-      const message = "the order";
+      const message = "the order. Code must be unique";
       return ResponseError.response_error_save(response, message);
     }
 
-    //TODO
-    if (order_create[0] === undefined)
-      return ResponseError.response_error_save(response);
+    if (order_create.length === 0) {
+      const message = ": we didnot find the document";
+      return ResponseError.response_error_save(response, message);
+    }
 
     return response.status(201).json({ ...order });
   }

@@ -1,8 +1,6 @@
 const { Order } = require("../../models");
 const FindClientRepository = require("../findClient/FindClientRepository");
 const DocumentHelper = require("../../helpers/DocumentHelper");
-const ResponseError = require("../../helpers/ResponseError");
-const { response } = require("express");
 const CreateCashbackRepository = require("../createCashback/CreateCashbackRepository");
 
 class CreateOrderRepository {
@@ -11,7 +9,7 @@ class CreateOrderRepository {
 
     const client = documentChecking
       ? await FindClientRepository.findByDocument(order.document)
-      : ResponseError.response_error_file(response);
+      : false;
 
     const status =
       order.document === "15350946056" ? "Aprovado" : "Em validação";

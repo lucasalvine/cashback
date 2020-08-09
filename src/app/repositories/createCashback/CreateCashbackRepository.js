@@ -9,9 +9,13 @@ class CreateCashbackRepository {
       percentage: percentage,
       due_date: DateHelper.dueDate(order.date),
       order_id: order_id,
-    }).catch(function (err) {
-      return err;
-    });
+    })
+      .then(function (cashback_create) {
+        return cashback_create;
+      })
+      .catch(function (err) {
+        return err;
+      });
 
     return cashback;
   }
