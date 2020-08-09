@@ -5,7 +5,10 @@ class FindCashbackController {
   async index(request, response) {
     const document = request.query.document;
 
-    const cash_by_document = await FindCashbackService.execute(document);
+    const cash_by_document =
+      !document || !document.trim()
+        ? false
+        : await FindCashbackService.execute(document);
 
     if (!cash_by_document) {
       return ResponseError.response_error_document(response);

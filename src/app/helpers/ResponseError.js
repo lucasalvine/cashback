@@ -10,4 +10,10 @@ module.exports = {
   response_error_save(response, message) {
     return response.status(401).json({ message: "Cannot save " + message });
   },
+
+  response_error_document(response) {
+    return response
+      .status(401)
+      .json({ message: "Cannot find the cashback with this document" });
+  },
 };
