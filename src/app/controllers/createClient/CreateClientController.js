@@ -8,16 +8,15 @@ class createClient {
 
     const client_id = await CreateClientService.execute(client);
 
+    if (!client_id) {
+      const message = " check your email, document and name.";
+      return ResponseError.response_error_save(response, message);
+    }
+
     if (client_id.errors) {
       const message = "the document already exists";
       return ResponseError.response_error_save(response, message);
     }
-
-    //TODO
-    /*     if (client_id[0] === undefined) {
-      const message = "the name is empty";
-      return ResponseError.response_error_save(response, message);
-    } */
 
     return response.status(201).json({ ...client });
   }

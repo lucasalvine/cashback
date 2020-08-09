@@ -6,9 +6,12 @@ class CreateClientService {
   async execute(request) {
     const emailChecking = EmailHelper.emailValidator(request.email);
     const documentChecking = DocumentHelper.documentValidator(request.document);
+    const emptyName = request.name.trim() ? true : false;
 
-    if (emailChecking && documentChecking)
+    if (emailChecking && documentChecking && emptyName)
       return await CreateClientRepository.save(request);
+
+    return false;
   }
 }
 

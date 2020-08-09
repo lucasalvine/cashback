@@ -6,6 +6,7 @@ const client = Router();
 
 client.post("/client", CreateClientController.store);
 
+//TODO CHANGE TO OTHER ROUTE FILE
 client.get("/cashback_accumulated", FindCashbackController.index);
 
 module.exports = client;

@@ -1,6 +1,6 @@
 module.exports = {
   documentValidator(document) {
-    const cleanDocument = document.replace(/[^\d]+/g, "");
+    const cleanDocument = this.documentConverter(document);
     const length = cleanDocument.length === 11;
 
     return cleanDocument && length ? true : false;

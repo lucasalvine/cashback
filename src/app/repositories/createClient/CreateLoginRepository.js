@@ -7,9 +7,13 @@ class CreateLoginRepository {
       email: request.email,
       password: request.password,
       client_id: client_id,
-    }).catch(function (err) {
-      console.log(err);
-    });
+    })
+      .then(function (login_create) {
+        return login_create;
+      })
+      .catch(function (err) {
+        return err;
+      });
 
     return login;
   }
