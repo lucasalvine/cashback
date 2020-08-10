@@ -5,15 +5,6 @@ const app = require("../../../src/app");
 const truncate = require("../../utils/truncate");
 
 describe("Find Session", () => {
-  beforeAll(async () => {
-    await request(app).post("/clients").send({
-      name: "Lucas Cunha",
-      document: "12345678900",
-      email: "lucas@teste.com",
-      password: "1234",
-    });
-  });
-
   afterAll(async () => {
     await truncate();
   });
