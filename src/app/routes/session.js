@@ -3,6 +3,6 @@ const FindSessionController = require("../controllers/findSession/FindSessionCon
 
 const session = Router();
 
-session.post("/session", FindSessionController.store);
+session.post("/sessions", FindSessionController.store);
 
 module.exports = session;

@@ -27,9 +27,9 @@ class App {
     this.server.use(morgan("combined", { stream: winston.stream }));
 
     this.server.use(client);
-    this.server.use(order);
     this.server.use(session);
     this.server.use(cashback);
+    this.server.use(order);
   }
 }
 

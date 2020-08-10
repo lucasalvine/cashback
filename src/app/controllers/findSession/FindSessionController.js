@@ -15,7 +15,7 @@ class FindSessionController {
       return ResponseError.response_error_password(response);
     }
 
-    return response.json({
+    return response.status(201).json({
       login,
       token: login.generateToken(),
     });
