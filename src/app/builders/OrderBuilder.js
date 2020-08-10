@@ -6,12 +6,12 @@ module.exports = {
 
     return orders.map((orderCashback) => {
       return {
-        order_code: orderCashback.order.code,
-        order_value: orderCashback.order.value,
-        order_data: DateHelper.convertDate(orderCashback.order.date),
-        cashback_percentage: orderCashback.percentage * 100,
-        cashback_value: orderCashback.value,
-        order_status: orderCashback.order.status,
+        orderCode: orderCashback.order.code,
+        orderValue: orderCashback.order.value,
+        orderData: DateHelper.convertDate(orderCashback.order.date),
+        cashbackPercentage: orderCashback.percentage * 100,
+        cashbackValue: orderCashback.value,
+        orderStatus: orderCashback.order.status,
       };
     });
   },
