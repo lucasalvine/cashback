@@ -4,7 +4,7 @@ const DocumentHelper = require("../../helpers/DocumentHelper");
 
 class CreateClientRepository {
   async save(client) {
-    const create_client = await Client.create({
+    const createClient = await Client.create({
       name: client.name,
       document: DocumentHelper.documentConverter(client.document),
     })
@@ -16,7 +16,7 @@ class CreateClientRepository {
         return err;
       });
 
-    return create_client;
+    return createClient;
   }
 }
 

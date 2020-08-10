@@ -10,14 +10,14 @@ class FindOrderController {
       return ResponseError.response_error_save(response);
     }
 
-    const orders_cashback = JSON.parse(orders);
+    const ordersCashback = JSON.parse(orders);
 
-    if (orders_cashback.rows[0] === undefined) {
+    if (ordersCashback.rows[0] === undefined) {
       return ResponseError.response_error_file(response);
     }
 
     return response.status(201).json({
-      data: OrderBuilder.orderBuilder(orders_cashback),
+      data: OrderBuilder.orderBuilder(ordersCashback),
     });
   }
 }

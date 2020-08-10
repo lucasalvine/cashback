@@ -3,10 +3,10 @@ const DocumentHelper = require("../../helpers/DocumentHelper");
 
 class FindCashbackRepository {
   async findCash(document) {
-    const document_converter = DocumentHelper.documentConverter(document);
+    const documentConverter = DocumentHelper.documentConverter(document);
 
     return await BoticarioCashbackProvider.getCashBackAccumulated(
-      document_converter
+      documentConverter
     );
   }
 }

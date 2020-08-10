@@ -10,8 +10,8 @@ class CreateCashbackRepository {
       due_date: DateHelper.dueDate(order.date),
       order_id: order_id,
     })
-      .then(function (cashback_create) {
-        return cashback_create;
+      .then(function (cashbackCreate) {
+        return cashbackCreate;
       })
       .catch(function (err) {
         return err;

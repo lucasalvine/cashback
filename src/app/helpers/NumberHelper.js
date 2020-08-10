@@ -1,6 +1,6 @@
 module.exports = {
   convertValue(value) {
-    const value_float = parseFloat(value);
-    return value_float.toFixed(2);
+    const valueFloat = parseFloat(value);
+    return valueFloat.toFixed(2);
   },
 };

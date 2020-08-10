@@ -4,7 +4,7 @@ const DocumentHelper = require("../../helpers/DocumentHelper");
 const CreateCashbackRepository = require("../createCashback/CreateCashbackRepository");
 
 class CreateOrderRepository {
-  async save(order, cashback_value, cashback_percentage) {
+  async save(order, cashbackValue, cashbackPercentage) {
     const documentChecking = DocumentHelper.documentValidator(order.document);
 
     const client = documentChecking
@@ -16,7 +16,7 @@ class CreateOrderRepository {
 
     if (client[0] === undefined) return client;
 
-    const create_order = await Order.create({
+    const createOrder = await Order.create({
       code: order.code,
       value: order.value,
       date: order.date,
@@ -27,8 +27,8 @@ class CreateOrderRepository {
         const order_id = newOrder.get().id;
         return await CreateCashbackRepository.save(
           order_id,
-          cashback_value,
-          cashback_percentage,
+          cashbackValue,
+          cashbackPercentage,
           order
         );
       })
@@ -36,7 +36,7 @@ class CreateOrderRepository {
         return await err;
       });
 
-    return create_order;
+    return createOrder;
   }
 }
 

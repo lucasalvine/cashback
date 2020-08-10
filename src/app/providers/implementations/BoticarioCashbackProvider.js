@@ -5,7 +5,7 @@ class BoticarioCashbackProvider {
     const url = `${process.env.PROVIDER_URL} + ${document}`;
     const headers = { Authorization: `Bearer ${process.env.PROVIDER_TOKEN}` };
 
-    const cash_result = axios
+    const cashResult = axios
       .get(url, headers)
       .then(function (response) {
         return response.data;
@@ -14,7 +14,7 @@ class BoticarioCashbackProvider {
         return err;
       });
 
-    return cash_result;
+    return cashResult;
   }
 }
 

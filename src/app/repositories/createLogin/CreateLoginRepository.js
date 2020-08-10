@@ -7,8 +7,8 @@ class CreateLoginRepository {
       password: request.password,
       client_id: client_id,
     })
-      .then(function (login_create) {
-        return login_create;
+      .then(function (loginCreate) {
+        return loginCreate;
       })
       .catch(function (err) {
         return err;

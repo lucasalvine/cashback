@@ -4,12 +4,12 @@ module.exports = {
   },
 
   dueDate(date) {
-    const current_date = new Date(date);
+    const currentDate = new Date(date);
 
-    const due_date = new Date(
-      current_date.setMonth(current_date.getMonth() + process.env.ADD_MONTH)
+    const dueDate = new Date(
+      currentDate.setMonth(currentDate.getMonth() + process.env.ADD_MONTH)
     );
 
-    return this.convertDate(due_date);
+    return this.convertDate(dueDate);
   },
 };

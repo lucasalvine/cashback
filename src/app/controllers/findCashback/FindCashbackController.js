@@ -5,18 +5,18 @@ class FindCashbackController {
   async index(request, response) {
     const document = request.query.document;
 
-    const cash_by_document =
+    const cashByDocument =
       !document || !document.trim()
         ? false
         : await FindCashbackService.execute(document);
 
-    if (!cash_by_document) {
+    if (!cashByDocument) {
       return ResponseError.response_error_document(response);
     }
 
     return response.status(201).json({
       document: document,
-      cashback_accumulated: cash_by_document.body,
+      cashback_accumulated: cashByDocument.body,
     });
   }
 }

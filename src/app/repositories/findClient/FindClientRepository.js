@@ -2,15 +2,15 @@ const { Client } = require("../../models");
 const DocumentHelper = require("../../helpers/DocumentHelper");
 
 class FindClientRepository {
-  async findByDocument(client_document) {
+  async findByDocument(clientDocument) {
     const client = await Client.findAll({
       where: {
-        document: DocumentHelper.documentConverter(client_document),
+        document: DocumentHelper.documentConverter(clientDocument),
       },
       limit: 1,
     })
-      .then(function (client_find) {
-        return client_find;
+      .then(function (clientFind) {
+        return clientFind;
       })
       .catch(function (err) {
         return err;
