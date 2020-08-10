@@ -114,6 +114,9 @@ $ npm run start
 
 - GET/cashback_accumulated?document=00000000090
 
+- Se utilizar o Insomnia, é possível importar as rotas por aqui:
+  <a href="https://insomnia.rest/run/?label=Cashback&uri=https%3A%2F%2Fgithub.com%2Flucasalvine%2Fcashback%2Fblob%2Fmaster%2FInsomniaRoutes.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+
 ### Thats it ! :coffee:
 
 ---
