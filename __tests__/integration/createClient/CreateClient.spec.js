@@ -127,4 +127,23 @@ describe("Create Client", () => {
 
     expect(response.status).toBe(401);
   });
+
+  it("should create client", async () => {
+    const client = {
+      name: "Special Client",
+      document: "15350946056",
+      email: "special_client@teste.com",
+      password: "12345",
+    };
+
+    const response = await request(app).post("/clients").send({
+      name: client.name,
+      document: client.document,
+      email: client.email,
+      password: client.password,
+    });
+
+    expect(response.status).toBe(201);
+    expect(response.text).toContain(client.name);
+  });
 });

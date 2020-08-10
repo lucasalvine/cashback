@@ -2,13 +2,8 @@
 const request = require("supertest");
 
 const app = require("../../../src/app");
-const truncate = require("../../utils/truncate");
 
 describe("Find Session", () => {
-  afterAll(async () => {
-    await truncate();
-  });
-
   it("should authenticate with valid credentials", async () => {
     const response = await request(app)
       .post("/sessions")

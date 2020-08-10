@@ -106,4 +106,31 @@ describe("Create Order", () => {
     expect(response.status).toBe(401);
     expect(response.text).toContain("Token invalid");
   });
+
+  it("should create order for special client", async () => {
+    const order = {
+      code: "4",
+      document: "15350946056",
+      value: "12312.34",
+      date: "2020-01-01",
+    };
+
+    const client = await request(app).post("/sessions").send({
+      email: "special_client@teste.com",
+      password: "12345",
+    });
+
+    const response = await request(app)
+      .post("/orders")
+      .set("Authorization", `Bearer ${client.body.token}`)
+      .send({
+        code: order.code,
+        document: order.document,
+        value: order.value,
+        date: order.date,
+      });
+
+    expect(response.status).toBe(201);
+    expect(response.text).toContain(order.code);
+  });
 });
