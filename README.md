@@ -12,9 +12,9 @@ Os valores de cashbacks aplicados em cada compra são:
 
 Além desses pontos, é necessário o consumo de uma API Externa para retornar o valor de cashback acumulado para determinado cliente.
 
-Para salvar os dados, foi utilizado o SQLite.
+O banco de dados utilizado foi utilizado o SQLite.
 
-Foi utilizado também o Prettier (pré-configurado), e os lints necessários para manter o padrão do projeto (commitlin, eslint, husky e lint-staged)
+Foi utilizado também o Prettier (pré-configurado), e os lints necessários para manter o padrão do projeto (commitlint, eslint, husky e lint-staged)
 
 ### Bibliotecas utilizadas
 
@@ -23,7 +23,7 @@ Foi utilizado também o Prettier (pré-configurado), e os lints necessários par
 - [dotenv](https://www.npmjs.com/package/dotenv)
 - [axios](https://www.npmjs.com/package/axios)
 - [app-root-path](https://www.npmjs.com/package/app-root-path)
-- [bcryptjs]https://www.npmjs.com/package/bcryptjs()
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 - [email-validator](https://www.npmjs.com/package/email-validator)
 - [morgan](https://www.npmjs.com/package/morgan)
 - [winston](https://www.npmjs.com/package/winston)
@@ -45,8 +45,8 @@ src                 # Códigos do projeto
 ├── models          # Modelos das tabelas do banco de dados
 ├── providers       # Arquivo para acesso a API externas
 ├── repositories    # Arquivos responsáveis por persistir dados
-├── routes          # Arquivos de routa da aplicação
-├── services        # Arquivos de execução dos controllers
+├── routes          # Arquivos de rota da aplicação
+├── services        # Arquivos auxiliares entre controller e repositories
 ├─ database         # Arquivos referentes a tudo que envolve banco de dados
 ├─ logs             # Arquivo de logs do sistema (error e combine)
 ├─ app.js           # Classe inicial do sistema
@@ -57,10 +57,16 @@ src                 # Códigos do projeto
 
 ```
 # Inicializando o projeto
-$ Faça o download da pasta do projeto e depois iniciar com `npm install`
+$ Faça o download do repositório
 
-# Para executar os teste
+# Executando a instalação das bibliotecas
+$ npm install
+
+# Executando os teste
 $ npm test
+
+# Executando as migrations
+$ npm run db:migrate
 
 # Para executar a aplicação
 $ npm run start
@@ -81,7 +87,7 @@ $ npm run start
 
 ```javascript
 {
-	"name": "sasdads",
+	"name": "Lucas Teste",
 	"document": "10766827751",
 	"email": "lucas@teste.com",
 	"password": "1234"
@@ -101,7 +107,7 @@ $ npm run start
 
 ```javascript
 {
-    "code": "14",
+    "code": "1",
     "value": "1233.21",
     "date": "2020-01-10",
     "document": "10766827749"
@@ -115,7 +121,8 @@ $ npm run start
 - GET/cashback_accumulated?document=00000000090
 
 - Se utilizar o Insomnia, é possível importar as rotas por aqui:
-  <a href="https://insomnia.rest/run/?label=Cashback&uri=https%3A%2F%2Fgithub.com%2Flucasalvine%2Fcashback%2Fblob%2Fmaster%2FInsomniaRoutes.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+
+<a href="https://insomnia.rest/run/?label=Cashback&uri=https%3A%2F%2Fgithub.com%2Flucasalvine%2Fcashback%2Fblob%2Fmaster%2FInsomniaRoutes.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 
 ### Thats it ! :coffee:
 
