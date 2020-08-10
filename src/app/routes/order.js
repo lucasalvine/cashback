@@ -4,7 +4,7 @@ const FindOrderController = require("../controllers/findOrder/FindOrderControlle
 
 const order = Router();
 
-order.post("/order", CreateOrderController.store);
+order.post("/orders", CreateOrderController.store);
 
 order.get("/orders", FindOrderController.index);
 

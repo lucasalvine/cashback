@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">23.26% </span>
+                <span class="strong">76.74% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/43</span>
+                <span class='fraction'>33/43</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">54.55% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>6/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
+                <span class="quiet">Functions</span>
                 <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">23.26% </span>
+                <span class="strong">76.74% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/43</span>
+                <span class='fraction'>33/43</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -107,38 +107,38 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -149,39 +149,39 @@ const DocumentHelper = require("../../helpers/DocumentHelper");
 const CreateCashbackRepository = require("../createCashback/CreateCashbackRepository");
 &nbsp;
 class CreateOrderRepository {
-<span class="fstat-no" title="function not covered" >  async save(order, cashback_value, cashback_percentage) {</span>
-<span class="cstat-no" title="statement not covered" >    const documentChecking = DocumentHelper.documentValidator(order.document);</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const client = documentChecking</span>
+  async save(order, cashback_value, cashback_percentage) {
+    const documentChecking = DocumentHelper.documentValidator(order.document);
+&nbsp;
+    const client = documentChecking<span class="branch-0 cbranch-no" title="branch not covered" ></span>
 <span class="cstat-no" title="statement not covered" >      ? await FindClientRepository.findByDocument(order.document)</span>
 <span class="cstat-no" title="statement not covered" >      : false;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const status =</span>
-<span class="cstat-no" title="statement not covered" >      order.document === "15350946056" ? "Aprovado" : "Em validação";</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    if (client[0] === undefined) return client;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const create_order = await Order.create({</span>
-<span class="cstat-no" title="statement not covered" >      code: order.code,</span>
-<span class="cstat-no" title="statement not covered" >      value: order.value,</span>
-<span class="cstat-no" title="statement not covered" >      date: order.date,</span>
-<span class="cstat-no" title="statement not covered" >      document: DocumentHelper.documentConverter(order.document),</span>
-<span class="cstat-no" title="statement not covered" >      status: status,</span>
-<span class="cstat-no" title="statement not covered" >    })</span>
-<span class="cstat-no" title="statement not covered" >      .then(async (newOrder) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        const order_id = newOrder.get().id;</span>
-<span class="cstat-no" title="statement not covered" >        return await CreateCashbackRepository.save(</span>
+&nbsp;
+    const status =
+<span class="branch-0 cbranch-no" title="branch not covered" >      order.document === "15350946056" ? "Aprovado" : "</span>Em validação";
+&nbsp;
+    if (client[0] === undefined) return client;
+&nbsp;
+    const create_order = await Order.create({
+      code: order.code,
+      value: order.value,
+      date: order.date,
+      document: DocumentHelper.documentConverter(order.document),
+      status: status,
+    })
+      .then(async (newOrder) =&gt; {
+        const order_id = newOrder.get().id;
+<span class="branch-0 cbranch-no" title="branch not covered" >        return await CreateCashbackRepository.save(</span>
 <span class="cstat-no" title="statement not covered" >          order_id,</span>
 <span class="cstat-no" title="statement not covered" >          cashback_value,</span>
 <span class="cstat-no" title="statement not covered" >          cashback_percentage,</span>
 <span class="cstat-no" title="statement not covered" >          order</span>
 <span class="cstat-no" title="statement not covered" >        );</span>
 <span class="cstat-no" title="statement not covered" >      })</span>
-<span class="cstat-no" title="statement not covered" >      .catch(async function (err) {</span>
-<span class="cstat-no" title="statement not covered" >        return await err;</span>
+      .catch(async function (err) {
+<span class="branch-0 cbranch-no" title="branch not covered" >        return await err;</span>
 <span class="cstat-no" title="statement not covered" >      });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return create_order;</span>
+&nbsp;
+<span class="branch-0 cbranch-no" title="branch not covered" >    return create_order;</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 }
 &nbsp;
@@ -193,7 +193,7 @@ module.exports = new CreateOrderRepository();
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Aug 09 2020 20:58:59 GMT-0300 (GMT-03:00)
+                at Sun Aug 09 2020 21:24:18 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>

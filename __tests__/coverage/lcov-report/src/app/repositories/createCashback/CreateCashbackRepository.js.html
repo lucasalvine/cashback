@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/24</span>
+                <span class='fraction'>21/24</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">75% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
+                <span class="quiet">Functions</span>
                 <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/24</span>
+                <span class='fraction'>21/24</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -87,20 +87,20 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -110,21 +110,21 @@ const DateHelper = require("../../helpers/DateHelper");
 const NumberHelper = require("../../helpers/NumberHelper");
 &nbsp;
 class CreateCashbackRepository {
-<span class="fstat-no" title="function not covered" >  async save(order_id, value, percentage, order) {</span>
-<span class="cstat-no" title="statement not covered" >    const cashback = await Cashback.create({</span>
-<span class="cstat-no" title="statement not covered" >      value: NumberHelper.convertValue(value),</span>
-<span class="cstat-no" title="statement not covered" >      percentage: percentage,</span>
-<span class="cstat-no" title="statement not covered" >      due_date: DateHelper.dueDate(order.date),</span>
-<span class="cstat-no" title="statement not covered" >      order_id: order_id,</span>
-<span class="cstat-no" title="statement not covered" >    })</span>
-<span class="cstat-no" title="statement not covered" >      .then(function (cashback_create) {</span>
-<span class="cstat-no" title="statement not covered" >        return cashback_create;</span>
-<span class="cstat-no" title="statement not covered" >      })</span>
-<span class="cstat-no" title="statement not covered" >      .catch(function (err) {</span>
+  async save(order_id, value, percentage, order) {
+    const cashback = await Cashback.create({
+      value: NumberHelper.convertValue(value),
+      percentage: percentage,
+      due_date: DateHelper.dueDate(order.date),
+      order_id: order_id,
+    })
+      .then(function (cashback_create) {
+        return cashback_create;
+      })
+      .catch(function (err) {
 <span class="cstat-no" title="statement not covered" >        return err;</span>
 <span class="cstat-no" title="statement not covered" >      });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    return cashback;</span>
+&nbsp;
+<span class="branch-0 cbranch-no" title="branch not covered" >    return cashback;</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
 }
 &nbsp;
@@ -136,7 +136,7 @@ module.exports = new CreateCashbackRepository();
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Aug 09 2020 20:58:59 GMT-0300 (GMT-03:00)
+                at Sun Aug 09 2020 21:24:18 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../../../prettify.js"></script>
