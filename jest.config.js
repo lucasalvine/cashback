@@ -24,7 +24,7 @@ module.exports = {
   coverageDirectory: "__tests__/coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ["src/database", "src/logs"],
+  coveragePathIgnorePatterns: ["src/database", "src/logs", "src/server.js"],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",

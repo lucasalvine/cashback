@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: process.env.NODE_ENV === "test" ? ".env.test" : ".env",
+});
+
 module.exports = {
   percentageApplied(value) {
     if (value < 1000) return process.env.ORDER_VALUE_UNDER_THOUSAND;
