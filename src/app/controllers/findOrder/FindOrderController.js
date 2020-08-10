@@ -6,10 +6,6 @@ class FindOrderController {
   async index(request, response) {
     const orders = await FindOrderService.execute(request.query.page);
 
-    if (!orders) {
-      return ResponseError.response_error_save(response);
-    }
-
     const ordersCashback = JSON.parse(orders);
 
     if (ordersCashback.rows[0] === undefined) {
